@@ -1,44 +1,46 @@
-#lone OS2 labs
+### Setup
+
+## clone OS2 labs
 
 ```
 git clone https://gitlab.cs.pub.ro/so2/so2-labs.git
 ```
-##install docker (for linux)
+## install docker (for linux)
 
 ```
  https://docs.docker.com/engine/install/ubuntu/
  #if you are on windows , you can run WSL and then install docker inside it or simply use a virtuzl machine
 ```
-##change your direction to so2-labs/
+## change your direction to so2-labs/
 
 ```
 cd so2-labs/
 ```
 
-##create a docker container
+## create a docker container
 
 ```
 sudo ./local.sh docker interactive --privileged
 ```
 
-##create a shared folder between Qemu and Docker 
+## create a shared folder between Qemu and Docker 
 
 ```
 LABS=kernel_modules make skels
 ```
 
-##Boot Qemu 
+## Boot Qemu 
 
 ```
 make console
 ```
-##write root in login 
+## write root in login 
 
 ```
 qemux86 login:root
 ```
 
-##go to skels and insert the module 
+## go to skels and insert the module 
 
 ```
 root@qemux86:~/skels/lab02# insmod linked_list.ko                                          
@@ -53,7 +55,7 @@ PID :1111
 ```
 
 
-##useful links : 
+### Useful links : 
 
 https://linux-kernel-labs.github.io/refs/heads/master/index.html
 https://embetronicx.com/tutorials/linux/device-drivers/setup-ubuntu-and-raspberry-pi-linux-device-driver-tutorial/
