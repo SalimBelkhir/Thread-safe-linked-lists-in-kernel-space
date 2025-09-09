@@ -1,4 +1,4 @@
-###clone OS2 labs
+#lone OS2 labs
 
 ```
 git clone https://gitlab.cs.pub.ro/so2/so2-labs.git
